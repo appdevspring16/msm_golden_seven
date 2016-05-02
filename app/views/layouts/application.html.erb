@@ -5,10 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/slate/bootstrap.min.css">
 </head>
 <body>
+  <div class="btn-group btn-group-justified" role="group">
+    <a href="/directors" class="btn btn-block btn-primary">Directors</a>
+    <a href="/movies" class="btn btn-block btn-info">Movies</a>
+    <a href="/actors" class="btn btn-block btn-primary">Actors</a>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
