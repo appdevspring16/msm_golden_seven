@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 # Route for default domain:
 
-#get("/", { :controller => "movies", :action => "index"})
+  get("/", { :controller => "movies", :action => "index"})
 
 
 # Director routes
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
 
 # DELETE
+
+  get('/delete_director/:id', { :controller => 'directors', :action => 'destroy' })
 
 # CREATE
 
