@@ -10,22 +10,35 @@ def show
 end
 
 def destroy
+  @actor = Actor.find(params[:id])
+  @actor.destroy
 end
 
 def new_form
 end
 
-def create_form
-  # t.string:name
-  # t.text :bio
-  # t.string :dob
-  # t.string :image_url
+def create_row
+  @actor=Actor.new
+  @actor.name = params[:name]
+  @actor.bio = params[:bio]
+  @actor.dob = params[:dob]
+  @actor.image_url = params[:image_url]
+  @actor.save
+  render("show")
 end
 
 def edit_form
+    @actor = Actor.find(params[:id])
 end
 
 def update_row
+    @actor = Actor.find(params[:id])
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+    @actor.dob = params[:dob]
+    @actor.image_url = params[:image_url]
+    @actor.save
+    render("show")
 end
 
 
