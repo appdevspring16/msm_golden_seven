@@ -1,0 +1,32 @@
+<h1>Directors</h1>
+<hr>
+<div>
+  <a href="/directors/new_form" class="btn btn-primary">ADD A NEW DIRECTOR</a>
+</div>
+<div>
+  <table class="table">
+    <th>Image</th>
+    <th>DOB</th>
+    <th>Name</th>
+    <th>Bio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <tbody>
+      <%@director.each do |director|%>
+      <tr>
+      <td><img src="<%=director.image_url%>" alt="" /></td>
+      <td><%=director.dob=%></td>
+      <td><%=director.name=%></td>
+      <td><%=director.bio=%></td>
+      <td><a href="/directors/<%=director.id%>" class="btn btn-primary"></a></td>
+      <td><a href="/directors/<%=director.id%>/edit_form" class="btn btn-warning"></a></td>
+      <td><a href="/delete_director/<%=director.id%>" class="btn btn-danger"></a></td>
+
+    </tr>
+    <%end%>
+    </tbody>
+
+  </table>
+
+</div>
