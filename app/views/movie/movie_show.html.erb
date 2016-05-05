@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row greeting">
+        <div class="col-sm-3"><h1>Movie #<%= @movie_id %></h1></div>
+    </div>
+    <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Title</div>
+          <div class="col-lg-7"><%= @movie_title %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Year</div>
+          <div class="col-lg-7"><%= @movie_year %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Duration</div>
+          <div class="col-lg-7"><%= @movie_duration %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Description</div>
+          <div class="col-lg-7"><%= @movie_description %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Image</div>
+          <div class="col-lg-7"><img src="<%= @movie_url %>" alt="" /></div>
+      </div>
+
+  </div>
