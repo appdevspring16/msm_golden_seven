@@ -1,0 +1,13 @@
+<h1><%= params["type"].capitalize.chop %> #<%= @item.id %></h1>
+
+<dl>
+  <% @columns.each do |column| %>
+  <dt><%= column.capitalize %></dt>
+  <dd><%= @item.send(column.to_sym) %></dd>
+  <% end %>
+  <dt>Image</dt>
+  <dd><img src="<%= @item.image_url %>"></dd>
+</dl>
+
+<a href="/<%= params["type"] %>/<%= @item.id %>/edit_form">Edit <%= params["type"].chop %></a>
+<a href="/<%= params["type"] %>/<%= @item.id %>/delete">Delete <%= params["type"].chop %></a>
