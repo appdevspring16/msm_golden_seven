@@ -1,0 +1,43 @@
+<h1>Movies</h1>
+
+<hr>
+
+<p>
+   <a href="http://localhost:3000/movies/new_form" class="btn btn-info">ADD A NEW MOVIE</a>
+</p>
+
+<table class="table">
+<thead>
+  <tr>
+  <th>Image</th>
+  <th>Title</th>
+  <th>Year</th>
+  <th>Duration</th>
+  <th>Description</th>
+  <th></th>
+    <th></th>
+      <th></th>
+</tr>
+</thead>
+
+<tbody>
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><img src="<%= movie.image_url %>" width="80"></td>
+      <td><%= movie.title %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.duration %></td>
+      <td><%= movie.description %></td>
+
+
+
+        <td><a href="/movies/<%= movie.id %>" class="btn btn-danger" href="#" role="button"><i class="fa fa-search" aria-hidden="true"></i>
+</a> </td>
+        <td><a href="/movies/<%= movie.id %>/edit_form" class="btn btn-success" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i>
+</a></td>
+        <td><a href="delete_movie/<%= movie.id %>" class="btn btn-warning" href="#" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i>
+</a></td>
+          </tr>
+              <% end %>
+</tbody>
+</table>
