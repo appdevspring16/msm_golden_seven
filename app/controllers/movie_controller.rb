@@ -47,8 +47,41 @@ x.save
 
 @movie_id = Movie.find_by({:title=>@movie_title}).id
 
-
 render("movie_new_movie.html.erb")
+end
+
+def movie_edit_form
+
+  @movie_id=params[:id]
+  @movie_title = Movie.find_by({:id=>@movie_id}).title
+  @movie_year = Movie.find_by({:id=>@movie_id}).year
+  @movie_duration = Movie.find_by({:id=>@movie_id}).duration
+  @movie_description = Movie.find_by({:id=>@movie_id}).description
+  @movie_url = Movie.find_by({:id=>@movie_id}).image_url
+
+  render("movie_edit_form.html.erb")
 
 end
+
+def movie_edit_movie
+
+  @movie_id=params[:id]
+  @movie_title = params[:title]
+  @movie_year = params[:year]
+  @movie_duration = params[:duration]
+  @movie_description = params[:description]
+  @movie_url = params[:image_url]
+
+  x=Movie.find(@movie_id)
+  x.title = @movie_title
+  x.year = @movie_year
+  x.duration = @movie_duration
+  x.description = @movie_description
+  x.image_url = @movie_url
+  x.save
+
+  render("movie_edit_movie.html.erb")
+
+end
+
 end

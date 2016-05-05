@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row greeting">
+        <div class="col-sm-3">
+<h1>Edit Movie #<%= @movie_id %></h1>
+          </div>
+    </div>
+    <hr>
+
+    <form action="/movie/edit_movie/<%= @movie_id %>">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" id="title" value="<%= @movie_title %>">
+  </div>
+  <div class="form-group">
+    <label for="year">Year</label>
+    <input type="text" class="form-control" name="year" id="year" value="<%= @movie_year %>">
+  </div>
+  <div class="form-group">
+    <label for="duration">Duration</label>
+    <input type="text" class="form-control" name="duration" id="duration" value="<%= @movie_duration %>">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" name="description" id="description" value="<%= @movie_description %>">
+  </div>
+  <div class="form-group">
+    <label for="image_url">Image url</label>
+    <input type="text" class="form-control" name="image_url" id="image_url" value="<%= @movie_url %>">
+  </div>
+
+  <button type="submit" class="btn btn-primary">UPDATE MOVIE</button>
+</form>
