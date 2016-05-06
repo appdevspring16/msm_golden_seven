@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+
+        <h1>Edit Actor</h1>
+
+        <form action="/actors_change/<%= @i.id %>">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @i.name %>">
+          </div>
+          <div>
+            <label for="dob">Dob:</label>
+            <input type="text" id="dob" name="dob" placeholder="dob" class="form-control" value="<%= @i.dob %>">
+            <div>
+            </div>
+            <div>
+              <label for="bio">Bio:</label>
+              <textarea id="bio" name="bio" placeholder="bio" class="form-control" rows="3"><%= @i.bio %></textarea>
+            </div>
+            <div>
+              <label for="photo_image_url">image_url:</label>
+              <input type="text" id="image_url" name="image_url" placeholder="image_url" class="form-control" value="<%= @i.image_url %>">
+            </div>
+            <div>
+              <button class="btn btn-success btn-lg active">Edit Actor</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>
