@@ -17,6 +17,15 @@ get("/directors/delete/:id",  { :controller => "golden", :action => "directors_d
 get("/actors/delete/:id",  { :controller => "golden", :action => "actors_delete" })
 get("/movies/delete/:id",  { :controller => "golden", :action => "movies_delete" })
 
+# EDIT
+
+get("/directors/edit/:id",  { :controller => "golden", :action => "directors_edit" })
+get("/actors/edit/:id",  { :controller => "golden", :action => "actors_edit" })
+get("/movies/edit/:id",  { :controller => "golden", :action => "movies_edit" })
+
+get("/directors_change/:id",  { :controller => "golden", :action => "directors_change" })
+get("/actors_change/:id",  { :controller => "golden", :action => "actors_change" })
+get("/movies_change/:id",  { :controller => "golden", :action => "movies_change" })
 # READ
 
 get("/directors",  { :controller => "golden", :action => "directors" })

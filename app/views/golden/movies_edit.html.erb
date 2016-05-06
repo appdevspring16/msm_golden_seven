@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+
+        <h1>Edit Movie</h1>
+
+        <form action="/movies_change/<%= @i.id %>">
+          <div>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="title" class="form-control" value="<%= @i.title %>">
+          </div>
+          <div>
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" placeholder="year" class="form-control" value="<%= @i.year %>">
+            <div>
+            </div>
+            <div>
+              <label for="duration">Duration:</label>
+              <input type="text" id="duration" name="duration" placeholder="duration" class="form-control" value="<%= @i.duration %>">
+              <div>
+              </div>
+            <div>
+              <label for="description">Description:</label>
+              <textarea id="description" name="description" placeholder="description" class="form-control" rows="3"><%= @i.description %></textarea>
+            </div>
+            <div>
+              <label for="photo_image_url">image_url:</label>
+              <input type="text" id="image_url" name="image_url" placeholder="image_url" class="form-control" value="<%= @i.image_url %>">
+            </div>
+            <div>
+              <button>Edit Movie</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+  </html>

@@ -66,6 +66,55 @@ end
     redirect_to("http://localhost:3000/movies/")
   end
 
+# EDIT
+
+def actors_edit
+  @i = Actor.find_by({:id => params[:id]})
+  render("actors_edit.html.erb")
+end
+
+def actors_change
+  i = Actor.find_by({:id => params[:id]})
+  i.name = params[:name]
+  i.dob = params[:dob]
+  i.bio = params[:bio]
+  i.image_url = params[:image_url]
+  i.save
+  redirect_to("http://localhost:3000/actors")
+end
+
+def directors_edit
+  @i = Director.find_by({:id => params[:id]})
+  render("directors_edit.html.erb")
+end
+
+def directors_change
+  i = Director.find_by({:id => params[:id]})
+  i.name = params[:name]
+  i.dob = params[:dob]
+  i.bio = params[:bio]
+  i.image_url = params[:image_url]
+  i.save
+  redirect_to("http://localhost:3000/directors")
+end
+
+def movies_edit
+  @i = Movie.find_by({:id => params[:id]})
+  render("movies_edit.html.erb")
+end
+ 
+def movies_change
+  i = Movie.find_by({:id => params[:id]})
+  i.title = params[:title]
+  i.year = params[:year]
+  i.image_url = params[:image_url]
+  i.duration = params[:duration]
+  i.description = params[:description]
+  i.save
+  redirect_to("http://localhost:3000/movies")
+end
+
+
 # READ
 
   def directors
