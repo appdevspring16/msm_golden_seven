@@ -1,5 +1,8 @@
 
 <h1><%=@types%>s<h1>
+<form action="/<%=@types.downcase%>s/new_form">
+  <button>Add a new <%=@types%></button>
+</form>
 
 <% if @types == "Director" %>
   <table>

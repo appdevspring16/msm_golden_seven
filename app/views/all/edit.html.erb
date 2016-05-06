@@ -1,0 +1,73 @@
+<h1>Edit <%=@types%> #<%=@id.id%><h1>
+
+<% if @types == "Director" %>
+  <form action= "/update_director/<%=@id.id%>">
+    <div>
+      <label for="name_input">Name</label>
+      <input id="name_input" type="string" name="name" value="<%=@id.name%>">
+    </div>
+    <div>
+      <label for="bio_input">Bio</label>
+      <input id="bio_input" type="text" name="bio" value="<%=@id.bio%>">
+    </div>
+    <div>
+      <label for="dob_input">D.O.B.</label>
+      <input id="dob_input" type="string" name="dob"  value="<%=@id.dob%>">
+    </div>
+    <div>
+      <label for="image_url_input">Image URL</label>
+      <input id="image_url_input" type="string" name="image_url"  value="<%=@id.image_url%>">
+    </div>
+    <div>
+      <button>Update <%=@types%></button>
+    </div>
+  </form>
+<% elsif @types == "Actor" %>
+  <form action= "/update_actor/<%=@id.id%>">
+    <div>
+      <label for="name_input">Name</label>
+      <input id="name_input" type="string" name="name" value="<%=@id.name%>">
+    </div>
+    <div>
+      <label for="bio_input">Bio</label>
+      <input id="bio_input" type="text" name="bio" value="<%=@id.bio%>">
+    </div>
+    <div>
+      <label for="dob_input">D.O.B.</label>
+      <input id="dob_input" type="string" name="dob"  value="<%=@id.dob%>">
+    </div>
+    <div>
+      <label for="image_url_input">Image URL</label>
+      <input id="image_url_input" type="string" name="image_url"  value="<%=@id.image_url%>">
+    </div>
+    <div>
+      <button>Update <%=@types%></button>
+    </div>
+  </form>
+<% elsif @types == "Movie" %>
+    <form action= "/update_movie/<%=@id.id%>">
+      <div>
+        <label for="title_input">Title</label>
+        <input id="title_input" type="string" name="title"  value="<%=@id.title%>">
+      </div>
+      <div>
+        <label for="year_input">Year</label>
+        <input id="year_input" type="integer" name="year"  value="<%=@id.year%>">
+      </div>
+      <div>
+        <label for="duration_input">Duration</label>
+        <input id="duration_input" type="integer" name="duration"  value="<%=@id.duration%>">
+      </div>
+      <div>
+        <label for="description_input">Description</label>
+        <input id="description_input" type="text" name="description"  value="<%=@id.description%>">
+      </div>
+      <div>
+        <label for="image_url_input">Image URL</label>
+        <input id="image_url_input" type="string" name="image_url"  value="<%=@id.image_url%>">
+      </div>
+      <div>
+        <button>Update <%=@types%></button>
+      </div>
+    </form>
+<% end %>
