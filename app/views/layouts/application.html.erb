@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
+
+
 <head>
   <title>MustSeeMoviesGoldenSeven</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/paper/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+<style>
+body {
+  padding-top: 75px;
+  background-color: #D8D8D8;
+}
+</style>
+
+
+
 </head>
 <body>
 
 <%= yield %>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href="/directors" class="navbar-brand">MovieDB</a>
+  </div>
 
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="/directors">Directors</a></li>
+      <li><a href="/movies">Movies</a></li>
+      <li><a href="/actors">Actors</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
 </body>
-</html>
