@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td><a href = "http://localhost:3000/"><h3>MovieDB</h3></a></td>
+    <td><a href ="http://localhost:3000/directors">Directors</a></td>
+    <td><a href ="http://localhost:3000/movies">Movies</a></td>
+    <td><a href ="http://localhost:3000/actors">Actors</a></td>
+  </tr>
+</table>
+<hr>
+<h1>Directors</h1>
+<hr>
+<a href ="">ADD A NEW DIRECTOR</a>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>DOB</th>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Actions</th>
+  </tr>
+  <% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <img src="<%= director.image_url %>" width="80">
+    </td>
+    <td>
+      <%= director.dob %>
+    </td>
+    <td>
+      <%= director.name %>
+    </td>
+    <td>
+      <%= director.bio %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>">Show</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>/edit">Edit</a>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>">Delete</a>
+    </td>
+  </tr>
+  <% end %>
+</table>
