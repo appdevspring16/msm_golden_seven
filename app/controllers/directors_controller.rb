@@ -8,4 +8,12 @@ class DirectorsController < ApplicationController
 
     render("show")
   end
+
+  def destroy
+    dr =Director.find(params[:id])
+
+    dr.destroy
+
+    redirect_to("/directors")
+  end
 end

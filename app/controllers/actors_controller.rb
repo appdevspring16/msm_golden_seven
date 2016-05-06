@@ -9,4 +9,12 @@ class ActorsController < ApplicationController
 
     render("show")
   end
+
+  def destroy
+    at =Actor.find(params[:id])
+
+    at.destroy
+
+    redirect_to("/actors")
+  end
 end
