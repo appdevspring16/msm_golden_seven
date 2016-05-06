@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row greeting margin-above-top-md">
+        <div class="col-sm-3">
+<h1>Edit Actor #<%= @actor_id %></h1>
+          </div>
+    </div>
+    <hr>
+
+    <form action="/actors/edit_actor/<%= @actor_id %>">
+  <div class="form-group">
+    <label for="dob">Dob</label>
+    <input type="text" class="form-control" name="dob" id="dob" value="<%= @actor_dob %>">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" id="name" value="<%= @actor_name %>">
+  </div>
+  <div class="form-group">
+    <label for="bio">Bio</label>
+    <input type="text" class="form-control" name="bio" id="bio" value="<%= @actor_bio %>">
+  </div>
+  <div class="form-group">
+    <label for="image_url">Image url</label>
+    <input type="text" class="form-control" name="image_url" id="image_url" value="<%= @actor_url %>">
+  </div>
+
+  <button type="submit" class="btn btn-primary">UPDATE ACTOR</button>
+</form>

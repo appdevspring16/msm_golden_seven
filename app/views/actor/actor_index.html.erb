@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row greeting margin-above-top-md">
+        <div class="col-sm-3"><h1>Actors</h1></div>
+    </div>
+    <hr>
+    <div class="row add">
+        <div class="col-lg-3 padding-inside-bottom-md"><a class="btn btn-primary btn-block" href="http://localhost:3000/actors/new_form" role="button">Add A New actor</a></div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row title">
+        <div class="col-lg-2">Image</div>
+        <div class="col-lg-2">Dob</div>
+        <div class="col-lg-1">Name</div>
+        <div class="col-lg-1">Bio</div>
+        <div class="col-lg-3"></div>
+    </div>
+
+    <% @list_of_actors.each do |fun| %>
+              <div class="row content">
+                <div class="col-lg-2"><img src="<%= fun.image_url %>" width=90px height=100px></div>
+                <div class="col-lg-2"><%= fun.dob %></div>
+                <div class="col-lg-1"><%= fun.name %></div>
+                <div class="col-lg-3"><%= fun.bio %></div>
+                <div class="col-lg-4">
+                  <a class="btn btn-primary" href="http://localhost:3000/actors/<%= fun.id %>" role="button">Show</a>
+        <a class="btn btn-primary" href="http://localhost:3000/actors/<%= fun.id %>/edit_form" role="button">Edit</a>
+        <a class="btn btn-primary" href="http://localhost:3000/delete_actor/<%= fun.id %>" role="button">Delete</a>
+                </div>
+            </div>
+      <% end %>
+    </div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row greeting margin-above-top-md">
+        <div class="col-sm-3"><h1>Actor #<%= @actor_id %></h1></div>
+    </div>
+    <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Dob</div>
+          <div class="col-lg-7"><%= @actor_dob %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Name</div>
+          <div class="col-lg-7"><%= @actor_name %></div>
+      </div>
+      <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Bio</div>
+          <div class="col-lg-7"><%= @actor_bio %></div>
+      </div>
+            <div class="row">
+          <div class="col-lg-offset-1 col-lg-2">Image</div>
+          <div class="col-lg-7"><img src="<%= @actor_url %>" alt="" /></div>
+      </div>
+      <a href="http://localhost:3000/actors">
+      <button type="submit" class="btn btn-primary" role="button">GO BACK</button></a>
+  </div>

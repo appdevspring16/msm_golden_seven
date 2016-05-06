@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="row greeting margin-above-top-md">
+        <div class="col-sm-3"><h1>Movies</h1></div>
+    </div>
+    <hr>
+    <div class="row add">
+        <div class="col-lg-3 padding-inside-bottom-md"><a class="btn btn-primary btn-block" href="/movie/new_form" role="button">Add A New Movie</a></div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row title">
+        <div class="col-lg-2">Image</div>
+        <div class="col-lg-2">Title</div>
+        <div class="col-lg-1">Year</div>
+        <div class="col-lg-1">Duration</div>
+        <div class="col-lg-3">Description</div>
+        <div class="col-lg-3"></div>
+    </div>
+
+    <% @list_of_movies.each do |fun| %>
+              <div class="row content">
+                <div class="col-lg-2"><img src="<%= fun.image_url %>" width=90px height=100px></div>
+                <div class="col-lg-2"><%= fun.title %></div>
+                <div class="col-lg-1"><%= fun.year %></div>
+                <div class="col-lg-1"><%= fun.duration %></div>
+                <div class="col-lg-3"><%= fun.description %></div>
+                <div class="col-lg-3">
+                  <a class="btn btn-primary" href="http://localhost:3000/movie/show/<%= fun.id %>" role="button">Show</a>
+        <a class="btn btn-primary" href="http://localhost:3000/movie/edit/<%= fun.id %>" role="button">Edit</a>
+        <a class="btn btn-primary" href="http://localhost:3000/movie/delete/<%= fun.id %>" role="button">Delete</a>
+                </div>
+            </div>
+      <% end %>
+    </div>
