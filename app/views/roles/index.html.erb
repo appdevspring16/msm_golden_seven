@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td><a href="/">MovieDB</a></td>
+    <td><a href="/directors">Directors</a></td>
+    <td><a href="/movies">Movies</a></td>
+    <td><a href="/actors">Actors</a></td>
+  </tr>
+</table>
+
+<h1>Roles</h1>
+
+<table>
+
+  <% @roles.each do |role| %>
+
+  <tr>
+    <td><%= role.character_name %></td>
+    <td><%= role.movie_id %></td>
+    <td><%= roles.actor_id %></td>
+    <td><a href="/roles/<%= roles.id %>">Show</a></td>
+    <td><a href="/roles/<%= role.id %>/edit_form">Edit</a></td>
+    <td><a href="/delete_role/<%= role.id %>">Delete</a></td>
+  </tr>
+
+  <% end %>
+
+</table>

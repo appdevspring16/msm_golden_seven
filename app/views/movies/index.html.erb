@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td><a href="/">MovieDB</a></td>
+    <td><a href="/directors">Directors</a></td>
+    <td><a href="/movies">Movies</a></td>
+    <td><a href="/actors">Actors</a></td>
+  </tr>
+</table>
+
+<h1>Movies</h1>
+
+<p><a href="/movies/new_form">Add a Movie</a></p>
+
+<table>
+
+  <tr>
+    <td>Image</td>
+    <td>Title</td>
+    <td>Year</td>
+    <td>Duration</td>
+    <td>Description</td>
+    <td>Director ID</td>
+  </tr>
+
+  <% @movies.each do |movie| %>
+
+  <tr>
+    <td><img src="<%= movie.image_url %>" width="80"></td>
+    <td><%= movie.title %></td>
+    <td><%= movie.year %></td>
+    <td><%= movie.duration %></td>
+    <td><%= movie.description %></td>
+    <td><%= movie.director_id %></td>
+    <td><a href="/movies/<%= movie.id %>">Show</a></td>
+    <td><a href="/movies/<%= movie.id %>/edit_form">Edit</a></td>
+    <td><a href="/delete_movie/<%= movie.id %>">Delete</a></td>
+  </tr>
+
+  <% end %>
+
+</table>
