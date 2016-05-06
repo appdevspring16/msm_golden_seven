@@ -1,0 +1,26 @@
+<h1><%= params["type"].capitalize %></h1>
+
+<a href="/<%= params["type"] %>/new_form">Add a new <%= params["type"].chop %></a>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <% @columns.each do |column| %>
+    <th><%= column.capitalize %></th>
+    <% end %>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @list.each do |item| %>
+  <tr>
+    <td><img src="<%= item.image_url %>" width="80"></td>
+    <% @columns.each do |column| %>
+    <td><%= item.send(column.to_sym) %></td>
+    <% end %>
+    <td><a href="/<%= params["type"] %>/<%= item.id %>">View</a></td>
+    <td><a href="/<%= params["type"] %>/<%= item.id %>/edit_form">Update</a></td>
+    <td><a href="/<%= params["type"] %>/<%= item.id %>/delete">Delete</a></td>
+  </tr>
+  <% end %>
+</table>

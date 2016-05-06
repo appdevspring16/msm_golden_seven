@@ -1,0 +1,15 @@
+<h1>Edit <%= params["type"].capitalize.chop %></h1>
+
+<form action="/<%= params["type"] %>/<%= params["id"] %>/edit">
+
+  <% @columns.each do |column| %>
+    <div>
+      <label for="<%= column.name %>"><%= column.name.capitalize %></label>
+      <input type="text" id="<%= column.name %>" name="the_<%= column.name %>" value="<%= @item.send(column.name.to_sym) %>">
+    </div>
+  <% end %>
+
+  <div>
+    <button>Edit <%= params["type"].capitalize.chop %></button>
+  </div>
+</form>

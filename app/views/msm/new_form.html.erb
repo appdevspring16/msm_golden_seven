@@ -1,0 +1,15 @@
+<h1>Add <%= params["type"].capitalize.chop %></h1>
+
+<form action="/<%= params["type"] %>/create">
+
+  <% @columns.each do |column| %>
+    <div>
+      <label for="<%= column.name %>"><%= column.name.capitalize %></label>
+      <input type="text" id="<%= column.name %>" name="the_<%= column.name %>">
+    </div>
+  <% end %>
+
+  <div>
+    <button>Create <%= params["type"].capitalize.chop %></button>
+  </div>
+</form>
