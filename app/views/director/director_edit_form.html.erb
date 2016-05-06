@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row greeting margin-above-top-md">
+        <div class="col-sm-3">
+<h1>Edit Director #<%= @director_id %></h1>
+          </div>
+    </div>
+    <hr>
+
+    <form action="/directors/edit_director/<%= @director_id %>">
+  <div class="form-group">
+    <label for="dob">Dob</label>
+    <input type="text" class="form-control" name="dob" id="dob" value="<%= @director_dob %>">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" id="name" value="<%= @director_name %>">
+  </div>
+  <div class="form-group">
+    <label for="bio">Duration</label>
+    <input type="text" class="form-control" name="bio" id="bio" value="<%= @director_bio %>">
+  </div>
+  <div class="form-group">
+    <label for="image_url">Image url</label>
+    <input type="text" class="form-control" name="image_url" id="image_url" value="<%= @director_url %>">
+  </div>
+
+  <button type="submit" class="btn btn-primary">UPDATE DIRECTOR</button>
+</form>
