@@ -1,0 +1,79 @@
+
+<h1><%=@types%>s<h1>
+<form action="/<%=@types.downcase%>s/new_form">
+  <button>Add a new <%=@types%></button>
+</form>
+
+<% if @types == "Director" %>
+  <table>
+
+    <% @arrays.each do |array| %>
+    <tr>
+      <td><img src="<%= array.image_url %>" width="80"></td>
+      <td><%= array.dob %></td>
+      <td><%= array.name %></td>
+      <td><%= truncate(array.bio) %></td>
+      <td>
+        <a href="/directors/<%= array.id %>">
+        Show</a>
+      </td>
+      <td>
+        <a href="/directors/<%= array.id %>/edit_form"<>
+        Edit</a>
+      </td>
+      <td>
+        <a href="/delete_director/<%= array.id %>">
+        Delete</a>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<% elsif @types == "Actor" %>
+  <table>
+
+    <% @arrays.each do |array| %>
+    <tr>
+      <td><img src="<%= array.image_url %>" width="80"></td>
+      <td><%= array.dob %></td>
+      <td><%= array.name %></td>
+      <td><%= truncate(array.bio) %></td>
+      <td>
+        <a href="/actors/<%= array.id %>">
+        Show</a>
+      </td>
+      <td>
+        <a href="/actors/<%= array.id %>/edit_form"<>
+        Edit</a>
+      </td>
+      <td>
+        <a href="/delete_actor/<%= array.id %>">
+        Delete</a>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<% elsif @types == "Movie" %>
+  <table>
+    <% @arrays.each do |array| %>
+    <tr>
+      <td><img src="<%= array.image_url %>" width="80"></td>
+      <td><%= array.title %></td>
+      <td><%= array.year %></td>
+      <td><%= array.duration %></td>
+      <td><%= array.description %></td>
+      <td>
+        <a href="/movies/<%= array.id %>">
+        Show</a>
+      </td>
+      <td>
+        <a href="/movies/<%= array.id %>/edit_form"<>
+        Edit</a>
+      </td>
+      <td>
+        <a href="/delete_movie/<%= array.id %>">
+        Delete</a>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>
