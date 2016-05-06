@@ -5,8 +5,31 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/paper/bootstrap.min.css">
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+ <style>body { padding-top: 50px; }</style>
+
+ <link href="/assets/application-933259d6df80d47b0b16c28abf326b5e.css" media="all" rel="stylesheet" />
+ <script src="/assets/application-40d525f9b95f1e8c8b65d24a279ca32d.js"></script>
+ <meta content="authenticity_token" name="csrf-param" />
+<meta content="0u8RY1AdQ5FYQ8tHaJGNPcOYozUL6wbucmamy/CcVuw=" name="csrf-token" />
+
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <nav class="navbar-default navbar-nav navbar-fixed-top">
+    <li><a href="/" class="btn">MovieDB</a>
+    </li>
+    <li><a href="/directors" class="btn">Directors</a>
+    </li>
+    <li><a href="/" class="btn">Movies</a>
+    </li>
+    <li><a href="/actors" class="btn">Actors</a>
+    </li>
+  </nav>
 
 <%= yield %>
 

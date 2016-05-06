@@ -1,0 +1,26 @@
+<h1>Edit Director #<%=@director.id%></h1>
+<form action="/update_director/<%=@director.id%>">
+
+
+<div>
+  <label>Dob</label>
+  <input type="text" name="dob" value="">
+</div>
+<div>
+  <label>Name</label>
+  <input type="text" name="name" value="">
+</div>
+<div>
+  <label>Bio</label>
+  <input type="text" name="bio" value="">
+</div>
+<div>
+  <label>Image URL</label>
+  <input type="text" name="image_url" placeholder="Image url<" value="">
+</div>
+<div>
+<button>Update Director</button>
+
+</div>
+
+</form>
