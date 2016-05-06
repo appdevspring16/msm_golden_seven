@@ -43,14 +43,18 @@ get('/delete_director/:id',{:controller=>'directors', :action=>'destroy'})
 #actors
 
 #Create actors
-
+get('/actors/new_form', {:controller=>'actors', :action=>'new_form'})
+get('/create_actor', {:controller=>'actors', :action=>'create_row'})
 
 #Read actors
-
+get('/actors', {:controller=>'actors', :action=>'index'})
+get('/actors/:id', {:controller=>'actors', :action=>'show'})
 
 #Update actors
-
+get('/actors/:id/edit_form',{:controller=>'actors', :action=>'edit_form'})
+get('/update_actor/:id',{:controller=>'actors', :action=>'update_row'})
 
 #Destroy actors
+get('/delete_actor/:id',{:controller=>'actors', :action=>'destroy'})
 
 end
