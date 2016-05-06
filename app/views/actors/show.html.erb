@@ -1,0 +1,39 @@
+
+<h1>Actor #<%= @actor.id %></h1>
+
+<table>
+
+<tr>
+  <td width="100">
+<h2 >Dob :</h2>
+  </td>
+  <td>
+    <%= @actor.dob%>
+  </td>
+</tr>
+
+<tr>
+  <td >
+    <h2>Name :</h2>
+  </td>
+  <td>
+    <%= @actor.name%>
+  </td>
+</tr>
+<tr>
+  <td >
+    <h2>Bio :</h2>
+  </td>
+  <td>
+    <%= @actor.bio%>
+  </td>
+</tr>
+<tr>
+  <td >
+    <h2>Image :</h2>
+  </td>
+  <td>
+    <img src="<%= @actor.image_url %>" width="320">
+  </td>
+</tr>
+</table>
