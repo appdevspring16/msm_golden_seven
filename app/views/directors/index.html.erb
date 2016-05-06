@@ -1,6 +1,8 @@
 <h1>Directors</h1>
 
-<a href="#">Add a New Director</a>
+<p>
+  <a href="#">Add a New Director</a>
+</p>
 
 <table>
   <tr>
@@ -22,10 +24,10 @@
       <%= director.dob %>
     </td>
     <td>
-      <%= director.bio %>
+      <%= truncate(director.bio) %>
     </td>
     <td>
-      <a href="#">Show</a>
+      <a href="\directors\<%= director.id %>">Show</a>
     </td>
     <td>
       <a href="#">Edit</a>

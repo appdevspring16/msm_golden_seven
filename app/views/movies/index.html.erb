@@ -1,6 +1,8 @@
 <h1>Movies</h1>
 
-<a href="#">Add a New Movie</a>
+<p>
+  <a href="#">Add a New Movie</a>
+</p>
 
 <table>
   <tr>
@@ -26,10 +28,10 @@
       <%= movie.duration %>
     </td>
     <td>
-      <%= movie.description %>
+      <%= truncate(movie.description) %>
     </td>
     <td>
-      <a href="https://www.google.com">Show</a>
+      <a href="\movies\<%= movie.id %>">Show</a>
     </td>
     <td>
       <a href="https://www.google.com">Edit</a>
