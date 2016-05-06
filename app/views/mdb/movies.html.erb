@@ -8,7 +8,6 @@
     <th>Year</th>
     <th>Duration</th>
     <th>Description</th>
-    <th>Director</th>
     <th>Actions</th>
   </tr>
   <% @list_of_movies.each do |movie| %>
@@ -27,9 +26,6 @@
     </td>
     <td>
       <%= movie.description %>
-    </td>
-    <td>
-      <%= movie.director %>
     </td>
     <td>
       <a href="http://localhost:3000/movies/<%= movie.id %>">Show</a>
