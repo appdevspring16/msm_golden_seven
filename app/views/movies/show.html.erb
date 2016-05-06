@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h1>Movie: <%= @movie.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title</dt>
+  <dd><%= @movie.title %></dd>
+
+  <dt>Year</dt>
+  <dd><%= @movie.year %></dd>
+
+  <dt>Duration</dt>
+  <dd><%= @movie.duration %></dd>
+
+  <dt>Description</dt>
+  <dd><%= @movie.description %></dd>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @movie.image_url %>" width="320"></dd>
+
+  <td>
+    <a href="/movies/<%= @movie.id %>/edit_form">Edit</a>
+  </td>
+  <td>
+    <a href="/delete_movie/<%= @movie.id %>">Delete</a>
+  </td>
+  <td>
+    <a href="/movies">Go back to Movies Index</a>
+  </td>
+
+</dl>
