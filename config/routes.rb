@@ -19,6 +19,13 @@ get("/directors/edit_director/:id",{:controller=>"director", :action=>"director_
 get("/directors/:id",{:controller=>"director", :action=>"director_show"})
 get("/directors/:id/edit_form",{:controller=>"director", :action=>"director_edit_form"})
 
-
+get("/",{:controller=>"actor", :action=>"actor_index"})
+get("/actors",{:controller=>"actor", :action=>"actor_index"})
+get("/delete_actor/:id",{:controller=>"actor", :action=>"actor_delete"})
+get("/actors/new_form",{:controller=>"actor", :action=>"actor_new_form"})
+get("/actors/new_actor",{:controller=>"actor", :action=>"actor_new_actor"})
+get("/actors/edit_actor/:id",{:controller=>"actor", :action=>"actor_edit_actor"})
+get("/actors/:id",{:controller=>"actor", :action=>"actor_show"})
+get("/actors/:id/edit_form",{:controller=>"actor", :action=>"actor_edit_form"})
 
 end
