@@ -1,5 +1,23 @@
 class MoviesController < ApplicationController
 
+  def new_form
+
+  end
+
+  def create_row
+    mv = Movie.new
+
+    mv.title = params[:title]
+    mv.year = params[:year]
+    mv.duration = params[:duration]
+    mv.description = params[:description]
+    mv.image_url = params[:image_url]
+
+    mv.save
+
+    redirect_to("/movies")
+  end
+
   def index
     @movie_list = Movie.all
   end

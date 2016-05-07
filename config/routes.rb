@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   #movies
   get("/movies/new_form", { :controller => "movies", :action => "new_form"})
+  get("/create_movie", { :controller => "movies", :action => "create_row"})
 
   get("/movies", { :controller => "movies", :action => "index"})
   get("/movies/:id", { :controller => "movies", :action => "show"})
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
 
   #directors
   get("/directors/new_form", { :controller => "directors", :action => "new_form"})
+  get("/create_director", { :controller => "directors", :action => "create_row"})
 
   get("/directors", { :controller => "directors", :action => "index"})
   get("/directors/:id", { :controller => "directors", :action => "show"})
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
 
   #actors
   get("/actors/new_form", { :controller => "actors", :action => "new_form"})
+  get("/create_actor", { :controller => "actors", :action => "create_row"})
+
 
   get("/actors", { :controller => "actors", :action => "index"})
   get("/actors/:id", { :controller => "actors", :action => "show"})

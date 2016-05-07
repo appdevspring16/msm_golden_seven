@@ -1,4 +1,22 @@
 class DirectorsController < ApplicationController
+
+  def new_form
+
+  end
+
+  def create_row
+    dr = Director.new
+
+    dr.name = params[:name]
+    dr.dob = params[:dob]
+    dr.bio = params[:bio]
+    dr.image_url = params[:image_url]
+
+    dr.save
+
+    redirect_to("/directors")
+  end
+
   def index
     @director_list = Director.all
   end
