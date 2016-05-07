@@ -1,19 +1,10 @@
 class MdbController < ApplicationController
-  def directors
-    @list_of_directors=Director.all
-  end
-
-  def actors
-    @list_of_actors=Actor.all
-  end
-
   def movies
     @list_of_movies=Movie.all
   end
 
   def show_movie
     m = Movie.find_by({ :id => params[:id]})
-
     @movie = m
   end
 
@@ -42,5 +33,11 @@ class MdbController < ApplicationController
     m.description =params[:movie_description]
     m.save
     redirect_to("http://localhost:3000/movies")
+  end
+
+  def delete_movie
+    m = Movie.find_by({ :id => params[:id]})
+    @movie = m
+    m.destroy
   end
 end

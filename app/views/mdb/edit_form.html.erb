@@ -1,5 +1,5 @@
 <h1>Edit Movie #<%= @movie.id %></h1>
-<form action="http://localhost:3000/create_movie">
+<form action="http://localhost:3000/update_row_movie">
   <label for="title">Title:</label>
   <input name="movie_title" id="title" type="text" value="<%= @movie.title %>"><br>
   <label for="year">Year:</label>
@@ -10,5 +10,5 @@
   <input name ="movie_description" id="description" type="text" value="<%= @movie.description %>"><br>
   <label for="url">Image URL:</label>
   <input name ="image_url" id="url" type="text" value="<%= @movie.image_url %>"><br>
-  <button>Create Movie</button>
+  <button>Edit Movie</button>
 </form>
