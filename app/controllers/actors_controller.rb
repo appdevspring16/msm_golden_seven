@@ -1,0 +1,65 @@
+class ActorsController < ApplicationController
+
+  def index
+    @list_of_actors = Actor.all
+  end
+
+  def show
+    @actor = Actor.find_by({ :id => params[:id] })
+
+  end
+
+  def delete
+
+    @actor = Actor.find_by({ :id => params[:id] })
+    @actor.destroy
+
+  end
+
+  def new_form
+
+  end
+
+
+  def create_row
+    @actor = Actor.new
+    @actor.image_url = params[:image_url]
+    @actor.dob = params[:dob]
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+
+
+    @actor.save
+
+  render("show.html.erb")
+  end
+
+  def edit_form
+    @actor = Actor.find_by({ :id => params[:id] })
+  end
+
+  def update_row
+    @actor = Actor.find_by({ :id => params[:id] })
+    @actor.image_url = params[:image_url]
+    @actor.dob = params[:dob]
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+
+
+    @actor.save
+
+  render("show.html.erb")
+
+
+
+
+  end
+
+
+
+
+
+
+
+
+end
