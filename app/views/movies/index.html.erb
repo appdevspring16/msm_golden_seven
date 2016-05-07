@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Connect to Bootstrap CSS -->
+<link rel="stylesheet" href="app/assets/stylesheets/bootstrap.css">
+
+<!-- Connect to Font Awesome CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Connect to our own additional CSS -->
+<link rel="stylesheet" href="app/assets/stylesheets/additional_styles.css">
+
+<!-- These meta tags make Bootstrap responsive and more accessible -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Connect to Google Web Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<nav class = "padding-inside-top-xs">
+<div class="btn-group" role="group" aria-label="...">
+  <a class="btn btn-success" href="/movies" role="button">Movies</a>
+    <a class="btn btn-default" href="/directors" role="button">Directors</a>
+        <a class="btn btn-default" href="/actors" role="button">Actors</a>
+</div>
+</nav>
+
+<p class = "padding-inside-top-xs"><a href="/movies/new_form" class="btn btn-primary">Add a New Movie</a></p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.description %></td>
+        <td>
+          <a href="/movies/<%= movie.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/movies/<%= movie.id %>/edit_form" class="btn btn-warning">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_movie/<%= movie.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</html>
