@@ -1,0 +1,18 @@
+<div class="">
+  <h1>Information for <%= @director.name %></h1>
+</div>
+
+<dl class="">
+  <dt>DOB</dt>
+  <dd><%= @director.dob %></dd>
+  <dt>Name</dt>
+  <dd><%= @director.name %></dd>
+  <dt>Bio</dt>
+  <dd><%= @director.bio %></dd>
+  <dt>Description</dt>
+  <dt>Picture</dt>
+  <dd><img src="<%= @director.image_url %>" alt="" /></dd>
+</dl>
+<p>
+  <a href="/directors">Main</a>
+</p>
