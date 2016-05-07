@@ -1,7 +1,7 @@
 <h1>Directors</h1>
 
 <p>
-  <a href="#">Add a New Director</a>
+  <a href="/directors/new_form">Add a New Director</a>
 </p>
 
 <table>
@@ -33,7 +33,7 @@
       <a href="#">Edit</a>
     </td>
     <td>
-      <a href="#">Delete</a>
+      <a href="/delete_director/<%= director.id %>">Delete</a>
     </td>
   </tr>
   <% end %>

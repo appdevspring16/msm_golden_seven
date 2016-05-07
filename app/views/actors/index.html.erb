@@ -1,7 +1,7 @@
 <h1>Actors</h1>
 
 <p>
-  <a href="#">Add a New Actor</a>
+  <a href="/actors/new_form">Add a New Actor</a>
 </p>
 
 <table>
@@ -33,7 +33,7 @@
       <a href="#">Edit</a>
     </td>
     <td>
-      <a href="#">Delete</a>
+      <a href="/delete_actor/<%= actor.id %>">Delete</a>
     </td>
   </tr>
   <% end %>
