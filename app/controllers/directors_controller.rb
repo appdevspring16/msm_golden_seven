@@ -1,7 +1,7 @@
 class DirectorsController < ApplicationController
   def index
     @directors = Director.all
-    # render("index.html.erb")
+
   end
 
   def show
