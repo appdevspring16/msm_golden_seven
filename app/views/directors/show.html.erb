@@ -1,0 +1,51 @@
+<h1>Director #<%= @director.id %></h1>
+
+<table>
+  <tr>
+    <td>
+      Dob
+    </td>
+    <td>
+      <%= @director.dob %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      <%=@director.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Bio
+    </td>
+    <td>
+      <%= @director.bio %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Image
+    </td>
+    <td>
+    <img src="<%= @director.image_url %>" width="300">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+<td>
+
+<a href="http://localhost:3000/directors">Head back to Directors index.</a>
+</td>
+  </tr>
+<tr>
+  <td>
+      <a href="http://localhost:3000/directors/delete_director/<%=@director.id %>">Want to delete this guy? Click me.</a>
+  </td>
+</tr>
+
+</table>

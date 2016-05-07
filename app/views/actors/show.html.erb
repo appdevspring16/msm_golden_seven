@@ -1,0 +1,51 @@
+<h1>Actor #<%= @actor.id %></h1>
+
+<table>
+  <tr>
+    <td>
+      Dob
+    </td>
+    <td>
+      <%= @actor.dob %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      <%=@actor.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Bio
+    </td>
+    <td>
+      <%= @actor.bio %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    Image
+    </td>
+    <td>
+    <img src="<%= @actor.image_url %>" width="300">
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+<td>
+
+<a href="http://localhost:3000/actors">Head back to Actors index.</a>
+</td>
+  </tr>
+<tr>
+  <td>
+      <a href="http://localhost:3000/actors/delete_actor/<%=@actor.id %>">Want to delete this guy? Click me.</a>
+  </td>
+</tr>
+
+</table>
