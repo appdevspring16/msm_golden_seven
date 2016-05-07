@@ -25,17 +25,17 @@
         <td><%= actor.name %></td>
         <td><%= truncate(actor.bio) %></td>
         <td>
-          <a href="/actors/<%= actor.id %>" class="btn btn-primary">
+          <a href="/actors/<%= actor.id %>" class="btn btn-primary">Show
             <i class="fa fa-search-plus"></i>
           </a>
         </td>
         <td>
-          <a href="/actors/<%= actor.id %>/edit_form" class="btn btn-warning">
+          <a href="/actors/<%= actor.id %>/edit_form" class="btn btn-warning">Edit
             <i class="fa fa-edit"></i>
           </a>
         </td>
         <td>
-          <a href="/delete_actor/<%= actor.id %>" class="btn btn-danger">
+          <a href="/delete_actor/<%= actor.id %>" class="btn btn-danger">Delte
             <i class="fa fa-trash-o"></i>
           </a>
         </td>
@@ -43,4 +43,3 @@
     <% end %>
   </tbody>
 </table>
-
