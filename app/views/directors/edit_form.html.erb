@@ -1,0 +1,58 @@
+<div class="">
+  <h1>Edit Movie <%= @movie.id %></h1>
+</div>
+
+<form class="" action="/update_movie/<%= @movie.id %>" method="post">
+
+<div class="">
+  <!-- Title -->
+  <label for="title">Title</label>
+  <div class="">
+    <input type="text" name="title" placeholder="Title" value="<%= @movie.title %>">
+  </div>
+</div>
+
+<!-- Year -->
+<div class="">
+  <label for="title">Year</label>
+  <div class="">
+    <input type="text" name="year" placeholder="Year" value="<%= @movie.year %>">
+  </div>
+</div>
+
+<!-- Duration -->
+<div class="">
+  <label for="title">Duration</label>
+  <div class="">
+    <input type="text" name="duration" placeholder="Duration" value="<%= @movie.duration %>">
+  </div>
+</div>
+
+<!-- Description -->
+<div class="">
+  <label for="title">Title</label>
+  <div class="">
+    <input type="text" name="description" placeholder="Description" value="<%= @movie.description %>">
+  </div>
+</div>
+
+<!-- Image URL -->
+<div class="">
+  <label for="title">Image url</label>
+  <div class="">
+    <input type="text" name="image_url" placeholder="Image URL" value="<%= @movie.image_url %>">
+  </div>
+</div>
+
+<!-- Director id -->
+<!-- <div class=""> -->
+  <!-- <label for="title">Director ID</label> -->
+  <!-- <div class=""> -->
+    <!-- <input type="text" name="director_id" placeholder="Director ID" value="<%# @movie.director_id %>"> -->
+  <!-- </div> -->
+<!-- </div> -->
+
+<div class="">
+  <input type="submit" name="" value="Update Movie">
+</div>
+</form>
