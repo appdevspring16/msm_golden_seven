@@ -2,11 +2,29 @@
 <html>
 <head>
   <title>MustSeeMoviesGoldenSeven</title>
+
+  <link rel="stylesheet" href="C:\Users\Vrajesh\Documents\Booth School of Business\Classes\Spring 2016\Application Development\bootstrap-3.3.6-dist\css\bootstrap.css" media="screen" title="no title" charset="utf-8">
+
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <a href="/">MovieDB</a>
+  </div>
+
+  <div class="">
+    <ul>
+      <li><a href="/directors">Directors</a></li>
+      <li><a href="/movies">Movies</a></li>
+      <li><a href="/actors">Actors</a></li>
+    </ul>
+  </div>
+</nav>
+
+
 
 <%= yield %>
 
