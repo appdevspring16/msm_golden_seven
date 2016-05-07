@@ -1,38 +1,30 @@
 <div class="">
-  <h1>Edit Movie <%= @movie.id %></h1>
+  <h1>Edit Actor #<%= @actor.id %></h1>
 </div>
 
-<form class="" action="/update_movie/<%= @movie.id %>" method="post">
+<form class="" action="/update_actor/<%= @actor.id %>" method="post">
 
 <div class="">
-  <!-- Title -->
-  <label for="title">Title</label>
+  <!-- Dob -->
+  <label for="dob">Name</label>
   <div class="">
-    <input type="text" name="title" placeholder="Title" value="<%= @movie.title %>">
+    <input type="text" name="dob" placeholder="Dob" value="<%= @actor.dob %>">
   </div>
 </div>
 
-<!-- Year -->
+<!-- Name -->
 <div class="">
-  <label for="title">Year</label>
+  <label for="name">Name</label>
   <div class="">
-    <input type="text" name="year" placeholder="Year" value="<%= @movie.year %>">
+    <input type="text" name="name" placeholder="Name" value="<%= @actor.name %>">
   </div>
 </div>
 
-<!-- Duration -->
+<!-- Bio -->
 <div class="">
-  <label for="title">Duration</label>
+  <label for="bio">Duration</label>
   <div class="">
-    <input type="text" name="duration" placeholder="Duration" value="<%= @movie.duration %>">
-  </div>
-</div>
-
-<!-- Description -->
-<div class="">
-  <label for="title">Title</label>
-  <div class="">
-    <input type="text" name="description" placeholder="Description" value="<%= @movie.description %>">
+    <input type="text" name="bio" placeholder="Bio" value="<%= @actor.bio %>">
   </div>
 </div>
 
@@ -40,19 +32,12 @@
 <div class="">
   <label for="title">Image url</label>
   <div class="">
-    <input type="text" name="image_url" placeholder="Image URL" value="<%= @movie.image_url %>">
+    <input type="text" name="image_url" placeholder="Image URL" value="<%= @actor.image_url %>">
   </div>
 </div>
 
-<!-- Director id -->
-<!-- <div class=""> -->
-  <!-- <label for="title">Director ID</label> -->
-  <!-- <div class=""> -->
-    <!-- <input type="text" name="director_id" placeholder="Director ID" value="<%# @movie.director_id %>"> -->
-  <!-- </div> -->
-<!-- </div> -->
 
 <div class="">
-  <input type="submit" name="" value="Update Movie">
+  <input type="submit" name="" value="Update Actor">
 </div>
 </form>
