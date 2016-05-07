@@ -1,0 +1,15 @@
+<h1>Edit Movie</h1>
+
+<form action="/update_movie/<%= @movie.id %>">
+  <label for="movie_title">Title</label>
+  <input type="text" name="movie_title" value="<%= @movie.title %>">
+  <label for="movie_year">Year</label>
+  <input type="integer" name="movie_year" value="<%= @movie.year %>">
+  <label for="movie_duration">Duration</label>
+  <input type="integer" name="movie_duration" value="<%= @movie.duration %>">
+  <label for="movie_description">Description</label>
+  <input type="textarea" name="movie_description" value="<%= @movie.description %>">
+  <label for="movie_url">Image url</label>
+  <input type="text" name="movie_url" value="<%= @movie.image_url %>">
+  <button>Create Movie</button>
+</form>
