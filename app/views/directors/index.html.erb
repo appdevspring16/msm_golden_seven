@@ -1,8 +1,15 @@
-<div class="page-header">
-  <h1>Directors</h1>
-</div>
+<!-- Connect to Font Awesome CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<p><a href="/directors/new_form" class="btn btn-primary">Add a New Director</a></p>
+<nav class = "padding-inside-top-xs">
+<div class="btn-group" role="group" aria-label="...">
+  <a class="btn btn-default" href="/movies" role="button">Movies</a>
+    <a class="btn btn-success" href="/directors" role="button">Directors</a>
+        <a class="btn btn-default" href="/actors" role="button">Actors</a>
+</div>
+</nav>
+
+<p class="padding-inside-top-xs"><a href="/directors/new_form" class="btn btn-primary">Add a New Director</a></p>
 
 <table class="table table-hover">
   <thead>
@@ -43,4 +50,3 @@
     <% end %>
   </tbody>
 </table>
-
