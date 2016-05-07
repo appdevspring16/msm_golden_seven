@@ -2,13 +2,22 @@
 <html>
 <head>
   <title>MustSeeMoviesGoldenSeven</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
 </head>
+
+
 <body>
+    <div>
+      <a href="/movies">Must See Movies Golden Seven</a>
+    </div>
 
-<%= yield %>
+    <div>
+      <ul>
+        <li><a href="/directors">Directors</a></li>
+        <li><a href="/movies">Movies</a></li>
+        <li><a href="/actors">Actors</a></li>
+      </ul>
+    </div>
 
+    <%= yield %>
 </body>
 </html>
