@@ -1,0 +1,54 @@
+<div class="page-header">
+  <h1>Movies</h1>
+</div>
+
+<p>
+  <a href="/directors">Director</a>
+  <a href="/actors">Actor</a>
+</p>
+
+
+<p><a href="/movies/new_form">Add a New Movie</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Duration</th>
+      <th>Description</th>
+      <th>Director ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td><img src="<%= movie.image_url %>" width="80"></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.description %></td>
+        <td>
+          <a href="/movies/<%= movie.id %>">
+            <i>Show</i>
+          </a>
+        </td>
+        <td>
+          <a href="/movies/<%= movie.id %>/edit_form">
+            <i>edit</i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_movie/<%= movie.id %>">
+            <i>delete</i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
