@@ -31,13 +31,13 @@
       <%= truncate(movie.description) %>
     </td>
     <td>
-      <a href="\movies\<%= movie.id %>">Show</a>
+      <a href="/movies/<%= movie.id %>">Show</a>
     </td>
     <td>
-      <a href="https://www.google.com">Edit</a>
+      <a href="/movies/<%= movie.id %>/edit_form">Edit</a>
     </td>
     <td>
-      <a href="\delete_movie\<%= movie.id %>">Delete</a>
+      <a href="/delete_movie/<%= movie.id %>">Delete</a>
     </td>
   </tr>
   <% end %>

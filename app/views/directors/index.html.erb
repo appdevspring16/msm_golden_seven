@@ -27,10 +27,10 @@
       <%= truncate(director.bio) %>
     </td>
     <td>
-      <a href="\directors\<%= director.id %>">Show</a>
+      <a href="/directors/<%= director.id %>">Show</a>
     </td>
     <td>
-      <a href="#">Edit</a>
+      <a href="/directors/<%= director.id %>/edit_form">Edit</a>
     </td>
     <td>
       <a href="/delete_director/<%= director.id %>">Delete</a>

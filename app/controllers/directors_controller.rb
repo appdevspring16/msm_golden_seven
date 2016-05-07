@@ -27,6 +27,23 @@ class DirectorsController < ApplicationController
     render("show")
   end
 
+  def edit_form
+    @director = Director.find(params[:id])
+  end
+
+  def update_row
+    dr = Director.find(params[:id])
+
+    dr.name = params[:name]
+    dr.dob = params[:dob]
+    dr.bio = params[:bio]
+    dr.image_url = params[:image_url]
+
+    dr.save
+
+    redirect_to("/directors")
+  end
+
   def destroy
     dr =Director.find(params[:id])
 
