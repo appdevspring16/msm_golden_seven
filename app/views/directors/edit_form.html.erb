@@ -1,0 +1,40 @@
+<h1>Edit Director #<%= @director.id %></h1>
+
+<form action="/update_director/<%= @director.id %>">
+  <div class="">
+    <label for="dob">dob</label>
+
+  <div class="">
+    <input type="text" id="dob" name="the_dob" placeholder="Dob" value="<%= @director.dob %>">
+  </div>
+  </div>
+
+  <div class="">
+    <label for="name">name</label>
+
+  <div class="">
+    <input type="text" id="name" name="the_name" placeholder="name" value="<%= @director.name %>">
+  </div>
+  </div>
+
+  <div class="">
+    <label for="bio">bio</label>
+
+  <div class="">
+    <input type="text" id="bio" name="the_bio" placeholder="bio" value="<%= @director.bio %>">
+  </div>
+  </div>
+
+  <div class="">
+    <label for="imagine_url">image_url</label>
+
+  <div class="">
+    <input type="text" id="imagine_url" name="the_imagine_url" placeholder="imagine_url" value="<%= @director.imagine_url %>">
+  </div>
+  </div>
+
+  <div class="">
+    <input type="submit" value="Update Director" class="btn btn-primary">
+  </div>
+
+</form>

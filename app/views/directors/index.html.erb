@@ -1,0 +1,52 @@
+<h3>MovieDB</h3>
+
+
+<h1>Directors</h1>
+
+<p>
+  <a href="/directors/new_form" class="btn btn-primary"> ADD A NEW DIRECTOR</a>
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Dob</th>
+      <th>Name</th>
+      <th>Bio</th>
+
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @directors.each do |director| %>
+    <tr>
+      <td>  <img src="<%=director.imagine_url%>" width="100" /></td>
+      <td> <%= director.dob %></td>
+      <td> <%= director.name %></td>
+      <td><% director.bio%></td>
+
+
+      <td>
+          <a href="/directors/<%= director.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus">details</i>
+          </a>
+        </td>
+        <td>
+          <a href="/directors/<%= director.id %>/edit_form" class="btn btn-warning">
+            <i class="fa fa-edit">edit</i>
+          </a>
+        </td>
+        <td>
+          <a href="/delete_director/<%= director.id %>" class="btn btn-danger">
+            <i class="fa fa-trash-o">delete</i>
+          </a>
+        </td>
+
+
+    </tr>
+    <%end%>
+  </tbody>
+</table>
