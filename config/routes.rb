@@ -21,7 +21,7 @@ get("/delete_director/:id", { :controller => "directors", :action => "destroy"})
 
 #Create
 get("/actors/new_form", { :controller => "actors", :action => "new_form"})
-get("/create_actors", { :controller => "actors", :action => "create_row"} )
+get("/create_actor", { :controller => "actors", :action => "create_row"} )
 
 #Read
 get("/actors", { :controller => "actors", :action => "index" })
@@ -32,7 +32,7 @@ get("/actors/:id/edit_form", { :controller => "actors", :action => "edit_form"})
 get("/update_actors/:id", { :controller => "actors", :action => "update_row"})
 
 #Delete
-get("/delete_actors/:id", { :controller => "actors", :action => "destroy"})
+get("/delete_actor/:id", { :controller => "actors", :action => "destroy"})
 
 #Routes for the Movie resource
 
