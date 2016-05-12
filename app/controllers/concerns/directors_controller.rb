@@ -32,7 +32,7 @@ class DirectorsController < ApplicationController
   end
 
   def update_row
-    @direc  tor = Director.find(params[:id])
+    @director = Director.find(params[:id])
 
     @director.dob = params[:dob]
     @director.name = params[:name]
