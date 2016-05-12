@@ -17,9 +17,10 @@ class MoviesController < ApplicationController
 
   def create_row
     @movie = Movie.new
-    @movie.name = params[:name]
-    @movie.bio = params[:bio]
-    @movie.dob = params[:dob]
+    @movie.title = params[:title]
+    @movie.year = params[:year]
+    @movie.duration = params[:duration]
+    @movie.description = params[:description]
     @movie.image_url = params[:image_url]
 
     @movie.save
@@ -34,9 +35,10 @@ class MoviesController < ApplicationController
   def update_row
     @movie = Movie.find(params[:id])
 
-    @movie.dob = params[:dob]
-    @movie.name = params[:name]
-    @movie.bio = params[:bio]
+    @movie.title = params[:title]
+    @movie.year = params[:year]
+    @movie.duration = params[:duration]
+    @movie.description = params[:description]
     @movie.image_url = params[:image_url]
 
     @movie.save
