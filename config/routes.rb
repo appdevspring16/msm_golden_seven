@@ -16,4 +16,21 @@ get("/update_director/:id", { :controller => "directors", action => "update_row"
 
 #Delete
 get("/delete_director/:id", { :controller => "directors", :action => "destroy"})
+
+#Routes for the Actor resource
+
+#Create
+get("/actors/new_form", { :controller => "actors", :action => "new_form"})
+get("/create_actor", { :controller => "actors", :action => "create_row"} )
+
+#Read
+get("/actors", { :controller => "actors", :action => "index" })
+get("/actors/:id", { :controller => "actors", :action => "show"})
+
+#Update
+get("/actors/:id/edit_form", { :controller => "actors", :action => "edit_form"})
+get("/update_actor/:id", { :controller => "actors", action => "update_row"})
+
+#Delete
+get("/delete_actor/:id", { :controller => "actors", :action => "destroy"})
 end
