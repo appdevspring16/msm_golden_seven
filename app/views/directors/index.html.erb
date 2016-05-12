@@ -1,0 +1,19 @@
+<h1>All the directors</h1>
+<h1>Howdy</h1>
+
+<a href="/directors/new">Add a new director</a>
+
+<ul>
+<% @directors.each do |director| %>
+  <li>
+    <h4>
+      <%= director.name %>
+    </h4>
+
+    <p><%= director.bio %></p>
+    <p><%= director.dob %></p>
+    <p><%= director.image_url %></p>
+
+  </li>
+<% end %>
+</ul>
