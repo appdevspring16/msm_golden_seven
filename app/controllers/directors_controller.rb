@@ -1,46 +1,48 @@
 class DirectorsController < ApplicationController
 
   def index
-    @director = Director.all
+    @directors = Director.all
   end
 
   def show
-    @show = Director.find(params[:id])
+    @director = Director.find(params[:id])
   end
 
-  def new_director
-
-
+  def new_form
   end
 
   def create_row
-    nd = Director.new
-    nd.dob = params[:the_dob]
-    nd.name = params[:the_name]
-    nd.bio = params[:the_bio]
-    nd.image_url = params[:the_image]
-    nd.save
+    @director = Director.new
+    @director.dob = params[:dob]
+    @director.name = params[:name]
+    @director.bio = params[:bio]
+    @director.image_url = params[:image_url]
 
-    redirect_to("/directors")
+    @director.save
 
+    render("show")
   end
 
   def edit_form
-    @edit = Director.find(params[:id])
+    @director = Director.find(params[:id])
   end
 
   def update_row
-    ud = Director.find(params[:id])
-    ud.dob = params[:the_dob]
-    ud.name = params[:the_name]
-    ud.bio = params[:the_bio]
-    ud.image_url = params[:the_image]
-    ud.save
+    @director = Director.find(params[:id])
 
-    redirect_to("/directors")
+    @director.dob = params[:dob]
+    @director.name = params[:name]
+    @director.bio = params[:bio]
+    @director.image_url = params[:image_url]
 
+    @director.save
+
+    render("show")
   end
 
+  def destroy
+    @director = Director.find(params[:id])
 
-
+    @director.destroy
+  end
 end
