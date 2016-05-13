@@ -1,0 +1,23 @@
+
+
+<form action="/update_director/:id" >
+<p>
+  <h1>Edit director</h1>
+</p>
+
+  <label>dob</label>
+  <input type="text" name="the_dob" value="<%= @edit.dob %>">
+
+  <label>name</label>
+  <input type="text" name="the_name" value="<%= @edit.name %>">
+
+  <label>bio</label>
+  <input type="text" name="the_bio" value="<%= @edit.bio %>">
+
+  <label>image url</label>
+  <input type="text" name="the_image" value="<%= @edit.image_url %>">
+
+<!-- buttons inside a form are to activate the form action -->
+  <button>UPDATE DIRECTOR</button>
+
+</form>

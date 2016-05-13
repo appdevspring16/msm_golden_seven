@@ -1,0 +1,46 @@
+
+<button>
+
+  <a href="/directors/new_form">ADD A NEW DIRECTOR</a>
+
+</button>
+
+<table>
+  <%  @director.each do |direc| %>
+
+  <tr>
+
+    <td>
+      <%= direc.name %>
+
+    </td>
+
+    <td>
+      <%= direc.bio %>
+
+    </td>
+
+    <td>
+      <%= direc.dob %>
+
+    </td>
+
+    <td>
+      <img src="<%= direc.image_url %>"/>
+    </td>
+
+    <td>
+      <button>
+        <a href="/directors">Details</a>
+      </button>
+
+      <button>
+        <a href="/directors">Update</a></button>
+
+      <button>Delete</button>
+    </td>
+
+  </tr>
+  <% end %>
+
+</table>
